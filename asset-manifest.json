@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newsify_frontend/static/css/main.c6ab2b5f.css",
+    "main.js": "/newsify_frontend/static/js/main.6cbc5bdd.js",
+    "index.html": "/newsify_frontend/index.html",
+    "main.c6ab2b5f.css.map": "/newsify_frontend/static/css/main.c6ab2b5f.css.map",
+    "main.6cbc5bdd.js.map": "/newsify_frontend/static/js/main.6cbc5bdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6ab2b5f.css",
+    "static/js/main.6cbc5bdd.js"
+  ]
+}
