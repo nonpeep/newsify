@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ArticleList from './ArticleList';
 import  DarkMode from './DarkMode';
 import Option from './Option'

@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import QASkeleton from './QASkeleton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleHalfStroke, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 
 const Article = (props) => {
   const [text, setText] = useState('')

@@ -1,11 +1,7 @@
-import { Fragment, useState, useEffect } from 'react'
-import { Listbox, Transition } from '@headlessui/react'
-import ArticleList from './ArticleList'
+import { Listbox } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 // import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
-
-
 
 
 const Option = (props) => {
