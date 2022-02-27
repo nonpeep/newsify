@@ -15,8 +15,16 @@ const Article = (props) => {
     if(!text) {
         getText(props.link)
     }
-    fetch("https://www.boredapi.com/api/activity") //make a fetch to the model with the question and the context 
-    .then(res => {return {"question":input,"answer":"The answer to your question majesty."}})
+    fetch(`${process.env.REACT_APP_BACKEND}/predict`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({context: text, question: input})
+    }) //make a fetch to the model with the question and the context 
+    .then(res => {
+      return res.json()
+    })
     .then(res => {
       setLoading(false)
       setQA([...QA, {question:input,answer:res.answer}])
@@ -27,15 +35,20 @@ const Article = (props) => {
   }
 
   const getText = (link) => {
-    fetch("https://www.boredapi.com/api/activity") //make a fetch to the scraper with the
-    .then(res =>{return {text:'for u bro:)'}})             //article link 
+    fetch(`${process.env.REACT_APP_BACKEND}/article`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({url: link})
+    })
+    .then(res => {
+      return res.json()
+    }) 
     .then(res => {
       setText(res.text)
     })
   }
-
-
-
 
   const handleChange = (e) => {
     setInput(e.target.value)
