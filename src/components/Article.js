@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
@@ -9,11 +9,37 @@ const Article = (props) => {
   const [isLoading, setLoading] = useState(false)
   const [QA, setQA] = useState([])
 
+  
+  useEffect(() => {
+    if (text) {
+      getQA()
+    }
+  }, [text]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const handleSubmit = (e) => {
     setLoading(true)
     if(!text) {
-        getText(props.link)
+      fetch(`${process.env.REACT_APP_BACKEND}/article`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({url: props.link})
+      })
+      .then(res => {
+        return res.json()
+      }) 
+      .then(res => {
+        setText(res.text)
+      })
     }
+    else {
+      getQA()
+    }
+    e.preventDefault()
+  }
+
+  const getQA = () => {
     fetch(`${process.env.REACT_APP_BACKEND}/predict`, {
       method: 'POST',
       headers: {
@@ -28,24 +54,6 @@ const Article = (props) => {
       setLoading(false)
       setQA([...QA, {question:input,answer:res.answer}])
       setInput('')
-    })
-    
-    e.preventDefault()
-  }
-
-  const getText = (link) => {
-    fetch(`${process.env.REACT_APP_BACKEND}/article`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({url: link})
-    })
-    .then(res => {
-      return res.json()
-    }) 
-    .then(res => {
-      setText(res.text)
     })
   }
 
