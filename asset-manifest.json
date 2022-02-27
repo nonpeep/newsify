@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/newsify_frontend/static/css/main.4276e5be.css",
-    "main.js": "/newsify_frontend/static/js/main.04202f91.js",
+    "main.js": "/newsify_frontend/static/js/main.c9271632.js",
     "index.html": "/newsify_frontend/index.html",
     "main.4276e5be.css.map": "/newsify_frontend/static/css/main.4276e5be.css.map",
-    "main.04202f91.js.map": "/newsify_frontend/static/js/main.04202f91.js.map"
+    "main.c9271632.js.map": "/newsify_frontend/static/js/main.c9271632.js.map"
   },
   "entrypoints": [
     "static/css/main.4276e5be.css",
-    "static/js/main.04202f91.js"
+    "static/js/main.c9271632.js"
   ]
 }
