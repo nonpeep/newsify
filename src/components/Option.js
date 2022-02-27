@@ -19,7 +19,7 @@ const Option = (props) => {
         </Listbox.Button>
         
         {/* <Transition as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0"> */}
-          <Listbox.Options className="transition-colors delay-200 relative top-3 bg-accent-1 dark:bg-secondary rounded-xl">
+          <Listbox.Options className="transition-colors delay-200 z-30 relative top-3 bg-accent-1 dark:bg-secondary rounded-xl">
           
           {props.news_channels.map((news, newsIdx) => (
               <Listbox.Option key={newsIdx} className={({ active }) => `cursor-default select-none relative p-2 rounded-xl ${active ? 'text-primary dark:text-accent-2 bg-accent-2 dark:bg-primary' : 'text-gray'}`} value={news}>

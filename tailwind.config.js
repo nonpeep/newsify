@@ -5,14 +5,24 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        appear: {
+          '0%': {opacity: 0},
+          '100%': {opacity: 1},
+        }
+      },
+      animation: {
+        appear: 'appear 1s ease-in-out forwards',
+      },
+    },
     colors:{
       'primary': '#EEEDDE',
       'secondary': '#E0DDAA',
       'accent-1': '#203239',
       'accent-2': '#141E27',
-      'secondary-shade': '#E0DDAAbb',
-      'accent-shade': '#203239bb',
+      'secondary-shade': '#E0DDAAaa',
+      'accent-shade': '#203239aa',
       'transparent': 'transparent',
       'current': 'currentColor',
 
