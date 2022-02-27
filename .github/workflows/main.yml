@@ -1,20 +1,15 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
     
     - name: Checkout
-      uses: actions/checkout@v1
-
+      uses: actions/checkout@v2
+    
     - name: Build
       run: |
         npm install
@@ -25,6 +20,5 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build
