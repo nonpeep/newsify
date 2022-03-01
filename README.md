@@ -43,6 +43,21 @@ The headlines are scraped from the Google's news section, so even though we are 
   </p>
   <br>
   <br>
+   
+  <h2> Techology Used: </h2>
+  <h3>Front-End</h3>
+  <ul>
+  <li>Tailwind CSS</li>
+  <li> React JS</li>
+  </ul>
+   <h3>Back-End</h3>
+  <ul>
+  <li>Flask</li>
+  <li> Docker</li>
+  <li> Cloud Run </li>
+  </ul>
+  <br>
+  
   
   <h2> Running the App </h2>
 <p>
