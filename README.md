@@ -1,2 +1,2 @@
 # Newsify Frontend
-.
+
