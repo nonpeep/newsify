@@ -45,7 +45,6 @@ The headlines are scraped from the Google's news section, so even though we are 
   <br>
   
   <h2> Running the App </h2>
-  ## Available Scripts
 <p>
 In the project directory, you can run:
 
