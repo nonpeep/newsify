@@ -54,7 +54,10 @@ export default function MyModal(props) {
                 </Dialog.Title>
                 <div className="mt-2 relative">
                   <p className="text-lg text-justify text-primary dark:text-accent-2 font-sans">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, delectus aliquid facilis similique iusto tempore adipisci enim! Blanditiis dicta reprehenderit non quisquam ratione veniam laborum pariatur. Eaque obcaecati, aliquam architecto perspiciatis molestiae quas labore repudiandae molestias. Unde voluptates possimus, ut mollitia aliquid quod sed magnam commodi iste vel, dolorem voluptatem eligendi minus omnis illo porro facilis? Quasi, eligendi doloremque ab optio dicta suscipit harum impedit exercitationem adipisci culpa nobis est praesentium non qui facilis! Repellendus, rem!
+                  Ever read a headline and wanted the answer to a simple question without having to parse through paragraphs on paragraphs of fluff? <br/><br/> Newsify gets the latest headlines from different news sources and topics of your choice, and answers your questions about the headline directly, without ever needing to skim the article.
+                  <br/>
+                  <br/>
+                  Newsify uses a machine learning model behind the scenes, but it can only answer questions when the answer can be found in the content of the article. The wording of the questions also might impact the quality of results, so remember to phrase them appropriately.
                   </p>
                 </div>
 
@@ -97,7 +100,10 @@ export default function MyModal(props) {
                       </Dialog.Title>
                       <div className="mt-2 relative">
                         <p className="text-lg text-justify text-primary dark:text-accent-2 font-sans">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, delectus aliquid facilis similique iusto tempore adipisci enim! Blanditiis dicta reprehenderit non quisquam ratione veniam laborum pariatur. Eaque obcaecati, aliquam architecto perspiciatis molestiae quas labore repudiandae molestias. Unde voluptates possimus, ut mollitia aliquid quod sed magnam commodi iste vel, dolorem voluptatem eligendi minus omnis illo porro facilis? Quasi, eligendi doloremque ab optio dicta suscipit harum impedit exercitationem adipisci culpa nobis est praesentium non qui facilis! Repellendus, rem!
+                        Ever read a headline and wanted the answer to a simple question without having to parse through paragraphs on paragraphs of fluff?<br/><br/>Newsify gets the latest headlines from different news sources and topics of your choice, and answers your questions about the headline directly, without ever needing to skim the article.
+                        <br/>
+                        <br/>
+                        Newsify uses a machine learning model behind the scenes, but it can only answer questions when the answer can be found in the content of the article. The wording of the questions also might impact the quality of results, so remember to phrase them appropriately.
                         </p>
                       </div>
       
