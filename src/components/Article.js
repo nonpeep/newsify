@@ -75,7 +75,7 @@ const Article = (props) => {
     
   return (
     <div className='animate-appear sm:m-6 m-3 transition-all delay-200 bg-secondary-shade dark:bg-accent-shade rounded-3xl'>
-        <h1 className='transition-colors delay-200 bg-secondary hover:underline  dark:bg-accent-1 rounded-t-3xl font-mono sm:text-2xl text-xl text-left sm:p-5 p-3 font-bold text-accent-1 dark:text-primary leading-relaxed'><a href={props.link} className = " decoration-solid " >{props.headline}</a>
+        <h1 className='transition-colors delay-200 bg-secondary hover:underline  dark:bg-accent-1 rounded-t-3xl font-mono sm:text-2xl text-xl text-left sm:p-5 p-3 font-bold text-accent-1 dark:text-primary leading-relaxed'><a href={props.link} className = " decoration-solid " target="_blank" rel="noreferrer">{props.headline}</a>
         
         </h1>
         <div className='transition-colors delay-200 bg-transparent rounded-b-3xl p-3'>
