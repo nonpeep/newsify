@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/vishal-lokare/AutoJoomer/"><img src="https://github.com/nonpeep/newsify_frontend/blob/master/public/logo-128.png" alt="AutoJoomer" width="100" height="100"></a><br>
-  <h1 align="center"><a href="https://nonpeep.github.io/newsify_frontend/"><b>Newsify</b></a></h1>
+  <a href="https://nonpeep.github.io/newsify/"><img src="https://github.com/nonpeep/newsify_frontend/blob/master/public/logo-128.png" alt="Newsify" width="100" height="100"></a><br>
+  <h1 align="center"><a href="https://nonpeep.github.io/newsify/"><b>Newsify</b></a></h1>
   <p align="center">
   <b>Maintainers</b>
   </p>
