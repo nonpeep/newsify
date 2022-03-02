@@ -1,9 +1,8 @@
 <p align="center">
   <a href="https://github.com/vishal-lokare/AutoJoomer/"><img src="https://github.com/nonpeep/newsify_frontend/blob/master/public/logo-128.png" alt="AutoJoomer" width="100" height="100"></a><br>
   <h1 align="center"><a href="https://nonpeep.github.io/newsify_frontend/"><b>Newsify</b></a></h1>
-  <br><br>
   <p align="center">
-  Maintainers-<br><br>
+  <b>Maintainers</b>
   </p>
   <p align="center">
   <table align='center' rules='none'>
@@ -30,37 +29,32 @@
       </td>  
     </tr>  
   </table>
-  </p>
-  <br>
-  <br>
-  <h2> About </h2>
-  <p>
-  Newsify gets all the latest headlines from different news sources such as NDTV and The Times of India and then answers questions for you.
+</p>
 
-Newsify uses a question-answering model that has been deployed to the cloud to answer your questions regarding the headline. The question-answer model will try to guess the answer from the article content of the headline. But this also brings in some limitations such as its inability to answer questions that may be related to the headline but are not answered in the actual article content.
 
-The headlines are scraped from the Google's news section, so even though we are limited to three news channels currently we can expand this to any kind of news channel whose headlines can be scraped from Google's news section.
-  </p>
-  <br>
-  <br>
-   
-  <h2> Techology Used: </h2>
-  <h3>Front-End</h3>
-  <ul>
-  <li>Tailwind CSS</li>
-  <li> React JS</li>
-  </ul>
-   <h3>Back-End</h3>
-  <ul>
-  <li>Flask</li>
-  <li> Docker</li>
-  <li> Cloud Run </li>
-  </ul>
-  <br>
+## About
+Ever read a headline and wanted the answer to a simple question about it without having to parse through paragraphs on paragraphs of fluff? **Newsify** gets the latest headlines from different news sources and topics of your choice, and answers your questions about the headline directly, without ever needing to skim the article.
+
+Newsify uses a publicly available question-answering machine learning model behind the scenes. We get the headlines from a Google News search with your given input, and extract the content of the articles to feed it to the model as context. As such, the model cannot deal with questions which do not have an answer within the article itself. The wording of the questions also might impact the quality of results, so remember to phrase them appropriately.
+
+This repository houses the frontend, while [this is the link for the backend.](https://github.com/nonpeep/newsify_backend) All contributions are welcome.
+
+## Technologies Used:
+### Front-End
+- Tailwind CSS
+-  React JS
+### Back-End
+- Flask
+- Docker
+- Cloud Run
   
+## Installation
+Clone the repository, `cd` into it, and run:
+```
+npm install
+```
+## Running the App
   
-  <h2> Running the App </h2>
-<p>
 In the project directory, you can run:
 
 ### npm start
@@ -71,23 +65,14 @@ Open [http://localhost/:3000](http//localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### npm test
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### npm run build
 
 Builds the app for production to the build folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### npm run eject
-</p>
-</p>
 
   
