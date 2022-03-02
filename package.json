@@ -2,7 +2,7 @@
   "name": "newsify",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://akshaywarrier.github.io/newsify_frontend/",
+  "homepage": "https://nonpeep.github.io/newsify/",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
