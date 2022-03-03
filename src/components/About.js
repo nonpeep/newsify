@@ -16,11 +16,10 @@ export default function MyModal(props) {
 
   return (
      <>
-      <div className='absolute flex items-center gap-2 p-2 px-5 text-center transition-colors delay-200 top-2 right-2 bg-accent-1 dark:bg-secondary w-2/2 h-14 rounded-xl'>
+      <div className>
       <button type='button' onClick={openModal}>
-        <FontAwesomeIcon className='transition-colors delay-200 w-9 h-9 text-secondary dark:text-accent-1 ' icon={faInfoCircle}/>
-         <span className='justify-center block text-xl font-bold text-center truncate transition-colors delay-200 text-primary dark:text-accent-1 font-pop'> 
-          </span> 
+        <FontAwesomeIcon className='absolute flex w-12 h-12 transition-colors delay-200 top-2 right-2 dark:text-secondary' icon={faInfoCircle}/>
+        <div class="sm: w-6 h-6 "></div>
       </button> 
       </div>
 
