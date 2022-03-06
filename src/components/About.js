@@ -18,8 +18,7 @@ export default function MyModal(props) {
      <>
       <div className>
       <button type='button' onClick={openModal}>
-        <FontAwesomeIcon className='absolute flex w-12 h-12 transition-colors delay-200 top-2 right-2 dark:text-secondary' icon={faInfoCircle}/>
-        <div class="sm: w-6 h-6 "></div>
+        <FontAwesomeIcon className='absolute flex transition-colors delay-200 w-7 h-7 sm:w-12 sm:h-12 top-2 right-2 dark:text-secondary' icon={faInfoCircle}/>
       </button> 
       </div>
 
