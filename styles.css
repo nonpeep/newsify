@@ -1,0 +1,89 @@
+
+/*The styles here below have been set to emulate the look of Newsify HomePage.
+To see the theme of the site and how it would look with a scrollbar to go with
+Newsify theme. I am utilizing all the colors that are used for the app in the
+tailwind.config.js file.
+
+
+The light and dark css id selector classes are to mock both light/dark modes
+and see how the scroll bar looks in each mode. It is has been applied to 
+seperate paragraph tags to get and idea for both.*/
+#light {
+    width: 200px;
+    height: 70vh;
+    overflow-y: scroll;
+    background: #E0DDAAaa;
+    padding: 1rem;
+    color:#203239;
+    text-align: center;
+}
+
+#dark {
+    width: 200px;
+    height: 70vh;
+    overflow-y: scroll;
+    background: #141E27;
+    padding: 1rem;
+    color:#E0DDAAaa;
+    text-align: center;
+}
+
+h1 {
+    color: #203239; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 75px;   
+}
+
+body {
+    background: #EEEDDE;
+    height: 500vh;
+}
+
+
+/*The styles below allow it to work with Chrome and Safari.*/
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #E0DDAA;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #203239;
+    border-radius: 5px;
+}
+
+
+/* The styles below are to have it work with Mozilla*/
+::-moz-scrollbar{
+    width: 20px;
+}
+
+::-moz-scrollbar-track{
+    background: #E0DDAA;
+    border-radius: 20px;
+}
+
+::-moz-scrollbar-thumb {
+    background: #203239;
+    border-radius: 5px;
+}
+
+
+/* The styles below are to have it work with MS Edge, Internet Explorer*/
+::-ms-scrollbar{
+    width: 20px;
+}
+
+::-ms-scrollbar-track{
+    background: #E0DDAA;
+    border-radius: 20px;
+}
+
+::-ms-scrollbar-thumb {
+    background: #203239;
+    border-radius: 5px;
+}
