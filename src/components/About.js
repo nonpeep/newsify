@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function MyModal(props) {
   let [isOpen, setIsOpen] = useState(false)
@@ -16,17 +16,15 @@ export default function MyModal(props) {
 
   return (
      <>
-      <div className='transition-colors delay-200 flex items-center bg-accent-1 dark:bg-secondary gap-2 w-2/2 h-14 p-2 text-center rounded-xl px-5'>
+      <div className>
       <button type='button' onClick={openModal}>
-         <span className='transition-colors delay-200 block truncate text-primary dark:text-accent-1 font-pop text-xl font-bold justify-center text-center'> 
-         About
-          </span> 
+        <FontAwesomeIcon className='absolute flex transition-colors delay-200 w-7 h-7 sm:w-12 sm:h-12 top-2 right-2 dark:text-secondary' icon={faInfoCircle}/>
       </button> 
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
         {props.darkTheme ?
-        <Dialog as="div" className="dark fixed inset-0 z-10 overflow-y-auto" onClose={closeModal}>
+        <Dialog as="div" className="fixed inset-0 z-10 overflow-y-auto dark" onClose={closeModal}>
           <div className="min-h-screen px-4 text-center">
             <Transition.Child
               as={Fragment}
@@ -37,7 +35,7 @@ export default function MyModal(props) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className=" fixed inset-0 opacity-20"  />
+              <Dialog.Overlay className="fixed inset-0 opacity-20"  />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -45,15 +43,15 @@ export default function MyModal(props) {
               &#8203;
             </span>
             <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">      
-              <div className="inline-block w-1/1 max-w-md p-6 my-8 overflow-hidden text-center align-middle transition-all transform shadow-xl rounded-2xl text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary">
+              <div className="inline-block max-w-md p-6 my-8 overflow-hidden text-center align-middle transition-all transform shadow-xl w-1/1 rounded-2xl text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary">
                 <Dialog.Title
                   as="h3"
-                  className="transition-colors delay-200 block truncate  font-pop text-3xl font-bold justify-center text-center p-2 mt-5 text-primary dark:text-accent-2"
+                  className="justify-center block p-2 mt-5 text-3xl font-bold text-center truncate transition-colors delay-200 font-pop text-primary dark:text-accent-2"
                 >
                   About
                 </Dialog.Title>
-                <div className="mt-2 relative">
-                  <p className="text-lg text-justify text-primary dark:text-accent-2 font-sans">
+                <div className="relative mt-2">
+                  <p className="font-sans text-lg text-justify text-primary dark:text-accent-2">
                   Ever read a headline and wanted the answer to a simple question without having to parse through paragraphs on paragraphs of fluff? <br/><br/> Newsify gets the latest headlines from different news sources and topics of your choice, and answers your questions about the headline directly, without ever needing to skim the article.
                   <br/>
                   <br/>
@@ -65,7 +63,7 @@ export default function MyModal(props) {
                   <button
                     onClick={closeModal}
                   >
-                   <FontAwesomeIcon icon={faXmark} className='text-primary dark:text-accent-2 rounded-full p-2 px-4 m-2 text-3xl absolute top-0 right-0 font-bold block border-0  bg-accent-1 dark:bg-secondary' />
+                   <FontAwesomeIcon icon={faXmark} className='absolute top-0 right-0 block p-2 px-4 m-2 text-3xl font-bold border-0 rounded-full text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary' />
                   </button>
                 </div>
               </div>
@@ -83,7 +81,7 @@ export default function MyModal(props) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Dialog.Overlay className=" fixed inset-0 opacity-20"  />
+                    <Dialog.Overlay className="fixed inset-0 opacity-20"  />
                   </Transition.Child>
       
                   {/* This element is to trick the browser into centering the modal contents. */}
@@ -91,15 +89,15 @@ export default function MyModal(props) {
                     &#8203;
                   </span>
                   <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">      
-                    <div className="inline-block w-1/1 max-w-md p-6 my-8 overflow-hidden text-center align-middle transition-all transform shadow-xl rounded-2xl text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary">
+                    <div className="inline-block max-w-md p-6 my-8 overflow-hidden text-center align-middle transition-all transform shadow-xl w-1/1 rounded-2xl text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary">
                       <Dialog.Title
                         as="h3"
-                        className="transition-colors delay-200 block truncate  font-pop text-3xl font-bold justify-center text-center p-2 mt-5 text-primary dark:text-accent-2"
+                        className="justify-center block p-2 mt-5 text-3xl font-bold text-center truncate transition-colors delay-200 font-pop text-primary dark:text-accent-2"
                       >
                         About
                       </Dialog.Title>
-                      <div className="mt-2 relative">
-                        <p className="text-lg text-justify text-primary dark:text-accent-2 font-sans">
+                      <div className="relative mt-2">
+                        <p className="font-sans text-lg text-justify text-primary dark:text-accent-2">
                         Ever read a headline and wanted the answer to a simple question without having to parse through paragraphs on paragraphs of fluff?<br/><br/>Newsify gets the latest headlines from different news sources and topics of your choice, and answers your questions about the headline directly, without ever needing to skim the article.
                         <br/>
                         <br/>
@@ -111,7 +109,7 @@ export default function MyModal(props) {
                         <button
                           onClick={closeModal}
                         >
-                         <FontAwesomeIcon icon={faXmark} className='text-primary dark:text-accent-2 rounded-full p-2 px-4 m-2 text-3xl absolute top-0 right-0 font-bold block border-0  bg-accent-1 dark:bg-secondary' />
+                         <FontAwesomeIcon icon={faXmark} className='absolute top-0 right-0 block p-2 px-4 m-2 text-3xl font-bold border-0 rounded-full text-primary dark:text-accent-2 bg-accent-1 dark:bg-secondary' />
                         </button>
                       </div>
                     </div>
