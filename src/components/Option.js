@@ -10,7 +10,7 @@ const Option = (props) => {
     <div className=" w-auto min-w-[200px] h-14">
       <Listbox value={props.selected} onChange={props.setSelected}>
         <Listbox.Button className="transition-colors delay-200 flex items-center justify-between gap-2 bg-accent-1 dark:bg-secondary w-full h-full p-2 text-left rounded-xl cursor-default sm:text-sm">
-          <span className="transition-colors delay-200 text-center block truncate text-primary dark:text-accent-1 font-pop text-xl font-bold">{props.selected.name}</span>
+          <span className="transition-colors delay-200 text-center block truncate text-primary dark:text-accent-1 font-pop text-xl font-bold capitalize">{props.selected.name}</span>
           <FontAwesomeIcon className='transition-colors delay-200 w-5 h-5 text-secondary dark:text-accent-1' icon={faAngleDown}/>
         </Listbox.Button>
         
@@ -22,7 +22,7 @@ const Option = (props) => {
       
                 {({ selected }) => (
                   <> 
-                    <span className='block text-primary dark:text-accent-2 font-pop text-xl font-bold'>{news.name}</span>
+                    <span className='block text-primary dark:text-accent-2 font-pop text-xl font-bol capitalize'>{news.name}</span>
                   </>   
                 )}
               </Listbox.Option>

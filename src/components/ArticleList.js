@@ -4,28 +4,21 @@ import Article from './Article';
 const ArticleList = (props) => {
     
     const [articles, setArticles] = useState([]);
-    const { news, setIsLoaded } = props;
+    const { category, setIsLoaded } = props;
     useEffect(() => {
         setIsLoaded(false);
-        fetch(`${process.env.REACT_APP_BACKEND}/headlines`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({site: news.name})
+        fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${props.category.name}&apiKey=${process.env.REACT_APP_NEWSAPI}`, {
+          method: 'GET'
         })
           .then(response => {
             return response.json()
           })
-          .then(res => {
-            return res
-          })
-          .then(res => setArticles(res.headlines)).then(res =>{setIsLoaded(true)})
-      }, [news.name, setIsLoaded])
+          .then(res => setArticles(res.articles)).then(res =>{setIsLoaded(true)})
+      }, [category.name, setIsLoaded])  // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className='flex flex-col sm:m-5 m-1 max-w-[864px]'>
      {props.isLoaded ? articles.map((article, index) => { 
-       return <Article key={index} headline={article[0]} link={article[1]}/> 
+       return <Article key={index} headline={article.title} link={article.url}/> 
        }) : null}
     </div>
   )

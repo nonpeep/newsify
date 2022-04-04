@@ -16,6 +16,7 @@ jobs:
         npm run-script build
       env:
         REACT_APP_BACKEND: ${{ secrets.REACT_APP_BACKEND }}
+        REACT_APP_NEWSAPI: ${{ secrets.REACT_APP_NEWSAPI }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5

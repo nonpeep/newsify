@@ -9,9 +9,13 @@ import ArticleListSkeleton from './ArticleListSkeleton';
 
 function App() {
   const news_channels = [
-    { name: 'NDTV' },
-    { name: 'The Hindu' },
-    { name: 'The Times of India' },
+    { name: 'general' },
+    { name: 'business' },
+    { name: 'entertainment' },
+    { name: 'health' },
+    { name: 'science' },
+    { name: 'sports' },
+    { name: 'technology' }
   ]
   const [selected, setSelected] = useState(news_channels[0])
   const [isLoaded, setIsLoaded] = useState(false);
@@ -39,7 +43,7 @@ function App() {
            <About darkTheme={darkTheme} />
           </div>
           <ArticleListSkeleton isLoaded={isLoaded}  /> 
-          <ArticleList news={selected} isLoaded={isLoaded} setIsLoaded={setIsLoaded} /> 
+          <ArticleList category={selected} isLoaded={isLoaded} setIsLoaded={setIsLoaded} /> 
       </div>
     </div>
     
