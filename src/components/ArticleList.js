@@ -7,8 +7,12 @@ const ArticleList = (props) => {
     const { category, setIsLoaded } = props;
     useEffect(() => {
         setIsLoaded(false);
-        fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${props.category.name}&apiKey=${process.env.REACT_APP_NEWSAPI}`, {
-          method: 'GET'
+        fetch(`${process.env.REACT_APP_BACKEND}/headlines`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({category: props.category.name})
         })
           .then(response => {
             return response.json()
