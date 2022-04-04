@@ -22,7 +22,7 @@ const Option = (props) => {
       
                 {({ selected }) => (
                   <> 
-                    <span className='block text-primary dark:text-accent-2 font-pop text-xl font-bol capitalize'>{news.name}</span>
+                    <span className='block text-primary dark:text-accent-2 font-pop text-xl font-bold capitalize'>{news.name}</span>
                   </>   
                 )}
               </Listbox.Option>
