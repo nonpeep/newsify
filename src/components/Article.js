@@ -57,6 +57,7 @@ const Article = (props) => {
         setInput("");
       })
       .catch((err) => {
+        setLoading(false);
         alert("Error getting QA");
       });
   };
